@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+}
+
+.parent {
+  width: 220px;
+  height: 220px;
+  background-color: #eee;
+  margin: 50px auto;
+  padding: 10px;
+  position: relative;
+}
+
+.parent span {
+  position: absolute;
+}
+
+.parent span:first-child {
+  top: -35px;
+}
+
+.parent span:first-child::before {
+  content: "";
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 1px;
+  background-color: #009688;
+}
+
+.parent span:first-child::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #009688;
+  left: 130px;
+  top: 50%;
+  transform: translateY(-50%);
+  clip-path: polygon(0 100%, 50% 50%, 0% 0%);
+}
+
+.parent span:nth-child(2) {
+  left: -35px;
+  writing-mode: vertical-lr;
+}
+
+.parent span:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  width: 2px;
+  height: 80px;
+  background-color: #009688;
+  transform: translateX(-50%);
+}
+
+.parent span:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: #009688;
+  transform: translateX(-50%);
+  clip-path: polygon(50% 50%, 100% 0%, 0% 0%);
+}
+
+.parent .circle1 {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  clip-path: circle(100px at 50% 50%);
+}
+
+.parent .circle2 {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  clip-path: circle(50px at 50% 50%);
+}
+
+.parent .t {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  clip-path: polygon(50% 100%, 100% 0%, 0% 0%);
+}
+
+.parent .tmain {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+.parent .t1 {
+  background-color: brown;
+  clip-path: polygon(50% 50%, 100% 0%, 0% 0%);
+}
+
+.parent .t2 {
+  background-color: brown;
+  clip-path: polygon(50% 50%, 100% 100%, 0% 100%);
+}
+
+.parent .t3 {
+  background-color: crimson;
+  clip-path: polygon(100% 0%, 100% 100%, 50% 50%);
+}
+
+.parent .t4 {
+  background-color: tomato;
+  clip-path: polygon(0% 0%, 0% 100%, 50% 50%);
+}
