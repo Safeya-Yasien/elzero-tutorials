@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+  background-color: #333;
+}
+
+p {
+  color: rgb(255 255 255 / 80%);
+  font-size: 30px;
+  /* width: fit-content; */
+  width: 418px;
+  margin: 30px auto;
+  border-right: 2px solid rgb(255 255 255 / 80%);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: control-width 3s steps(28) 2s both, blink 0.5s infinite;
+}
+
+@keyframes control-width {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 418px;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-right-color: 2px solid rgb(255 255 255 / 80%);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
