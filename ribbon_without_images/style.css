@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+}
+
+.product {
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #eee;
+}
+
+.product h2 {
+  margin: 0 0 20px;
+  background-color: #845ec2;
+  color: #fff;
+  padding: 15px;
+  width: calc(100% + 70px);
+  position: relative;
+  left: -35px;
+}
+
+.product h2::before,
+.product h2::after {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  position: absolute;
+}
+
+.product h2::before {
+  border-color: #b39cd0 #b39cd0 transparent transparent;
+  left: 0;
+  bottom: -19px;
+}
+
+.product h2::after {
+  border-color: #b39cd0 transparent transparent #b39cd0;
+  right: 0;
+  bottom: -19px;
+}
+
+.product p {
+  line-height: 1.6;
+}
